@@ -43,7 +43,7 @@ namespace ReviewWebsiteProject
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Product}/{action=ProductIndex}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

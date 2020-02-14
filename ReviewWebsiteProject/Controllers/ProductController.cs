@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ReviewWebsiteProject.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,11 @@ namespace ReviewWebsiteProject.Controllers
     {
         public ViewResult ProductIndex()
         {
-            return View();
+            ProductRepository productRepo = new ProductRepository();
+
+            var model = productRepo.GetAll();
+
+            return View(model);
         }
     }
 }

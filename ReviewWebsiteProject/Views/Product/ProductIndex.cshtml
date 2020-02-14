@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<ReviewWebsiteProject.Models.ProductModel>
 @{
     Layout = null;
 }
@@ -11,5 +11,12 @@
     <title>Index</title>
 </head>
 <body>
+    <h1>Products</h1>
+    @foreach(var product in Model)
+    { 
+        <h3>Name: @product.Name</h3>
+        <p>Description: @product.Description</p>
+        <hr />
+    }
 </body>
 </html>
