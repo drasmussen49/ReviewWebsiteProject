@@ -25,13 +25,13 @@ namespace ReviewWebsiteProject.Models
             Description = description;
         }
 
-        public ProductModel(int id, string name, string description, string image, string review)
+        public ProductModel(int id, string name, string description, string review, string image)
         {
             Id = id;
             Name = name;
             Description = description;
-            Image = image;
             Review = review;
+            Image = image;
         }
     }
 }
