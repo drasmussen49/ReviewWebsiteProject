@@ -1,4 +1,4 @@
-﻿
+﻿@model ReviewWebsiteProject.Models.ProductModel
 @{
     Layout = null;
 }
@@ -9,7 +9,12 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
+
+
 </head>
 <body>
+    <h2>Name: @Model.Name</h2>
+    <p>Description: @Model.Description</p>
+    <a href="/Product/ProductIndex">Back to home</a>
 </body>
 </html>
