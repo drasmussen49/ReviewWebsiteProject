@@ -24,6 +24,10 @@ namespace ReviewWebsiteProject.Repositories
         {
             return productDictionary.Values;
         }
- 
+
+        public ProductModel GetById(int id)
+        {
+            return productDictionary[id];
+        }
     }
 }

@@ -17,5 +17,14 @@ namespace ReviewWebsiteProject.Controllers
 
             return View(model);
         }
+
+        public ViewResult Details(int id)
+        {
+            ProductRepository productRepo = new ProductRepository();
+
+            var model = productRepo.GetById(id);
+
+            return View(model);
+        }
     }
 }
