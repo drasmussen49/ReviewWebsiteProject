@@ -15,6 +15,20 @@
 <body>
     <h2>Name: @Model.Name</h2>
     <p>Description: @Model.Description</p>
-    <a href="/Product/ProductIndex">Back to home</a>
+    <p>Review: @Model.Review</p>
+    <div style="object-fit:contain">@if (@Model.Image == "1.jpg")
+    {
+        <img src="https://cdn.shopify.com/s/files/1/0082/4092/2686/products/cabinet-pacman_2048x.png?v=1581102926" width="100px" />
+    }
+    @if (@Model.Image == "2.jpg")
+    {
+        <img src="https://cdn.shopify.com/s/files/1/0089/4550/0260/products/GauntletLegends22_800x.jpg?v=1565723610" width="100px" />
+    }
+    @if (@Model.Image == "3.jpg")
+    {
+        <img src="https://www.robotshop.com/media/files/images3/rb-imp-02_1.jpg" width="100px" />
+    }
+    </div>
+    <a href="/Product/ProductIndex">Back to all products</a>
 </body>
 </html>
