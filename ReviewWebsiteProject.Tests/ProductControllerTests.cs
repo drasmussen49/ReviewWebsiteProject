@@ -19,7 +19,7 @@ namespace ReviewWebsiteProject.Tests
         [Fact]
         public void ProductIndex_Return_View()
         {
-            var result = controller.ProductIndex();
+            var result = controller.Index();
 
             Assert.IsType<ViewResult>(result);
         }
@@ -27,9 +27,9 @@ namespace ReviewWebsiteProject.Tests
         [Fact]
         public void ProductIndex_Passes_All_Product_Models_To_View()
         {
-            var result = controller.ProductIndex();
+            var result = controller.Index();
 
-            Assert.IsAssignableFrom<IEnumerable<ProductModel>>(result.Model);
+            Assert.IsAssignableFrom<IEnumerable<Product>>(result.Model);
         }
 
         [Fact]
@@ -45,7 +45,7 @@ namespace ReviewWebsiteProject.Tests
         {
             var result = controller.Details(1);
 
-            Assert.IsType<ProductModel>(result.Model);
+            Assert.IsType<Product>(result.Model);
         }
             
     }
