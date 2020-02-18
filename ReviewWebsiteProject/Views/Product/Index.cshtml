@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ReviewWebsiteProject.Models.ProductModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <table class="table" border="3px">
+        @foreach (var product in Model)
+        {
+        <tr>
+            <td>  <h3>Name: @product.Name</h3></td>
+            <td>
+                <img class="img" src=@product.Image />
+            </td>
+            <td>  <a href="/Product/Details/@product.Id">Details</a></td>
+        </tr>
+        }
+    </table>
+
+</body>
+</html>

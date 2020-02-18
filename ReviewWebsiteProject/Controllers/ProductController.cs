@@ -9,7 +9,7 @@ namespace ReviewWebsiteProject.Controllers
 {
     public class ProductController : Controller
     {
-        public ViewResult ProductIndex()
+        public ViewResult Index()
         {
             ProductRepository productRepo = new ProductRepository();
 
