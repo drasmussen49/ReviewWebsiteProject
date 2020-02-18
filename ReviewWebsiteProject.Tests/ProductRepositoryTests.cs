@@ -1,17 +1,32 @@
-﻿using System;
+﻿using ReviewWebsiteProject.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
 namespace ReviewWebsiteProject.Tests
 {
-   public class ProductRepositoryTests
+    public class ProductRepositoryTests
     {
-        [Fact]
-        public void TODO()
-        {
-            Assert.True(false);
-        }
+        private ArcadeContext db;
+        private ProductRepository underTest;
 
+        public ProductRepositoryTests()
+        {
+            db = new ArcadeContext();
+            db.Database.BeginTransaction();
+            underTest = new ProductRepository(db);
+        }
+        
+        [Fact]
+        public void Count_Starts_At_Zero()
+        {
+            var db = new ArcadeContext();
+            var underTest = new ProductRepository(db);
+
+            var count = underTest.Count();
+
+            Assert.Equal(0, count);
+        }
     }
 }

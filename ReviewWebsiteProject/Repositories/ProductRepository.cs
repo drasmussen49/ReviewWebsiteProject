@@ -9,6 +9,7 @@ namespace ReviewWebsiteProject.Repositories
     public class ProductRepository : IRepository<Product>
     {
         public Dictionary<int, Product> productDictionary;
+        private ArcadeContext db;
 
         public ProductRepository()
         {
@@ -18,6 +19,16 @@ namespace ReviewWebsiteProject.Repositories
                 {2, new Product(2, "Gauntlet Legends", "Save the Realms from certain doom", "Wtf I love this game", "/img/pacman.jpg")},
                 {3, new Product(3, "DigDug", "Dig and dug", "Being inflated until you explode has got to hurt!", "/img/digdug.jpg")}
             };
+        }
+
+        public object Count()
+        {
+            return db.Products.Count();
+        }
+
+        public ProductRepository(ArcadeContext db)
+        {
+            this.db = db;
         }
 
         public IEnumerable<Product> GetAll()

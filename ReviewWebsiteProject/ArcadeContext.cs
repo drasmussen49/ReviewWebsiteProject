@@ -22,5 +22,18 @@ namespace ReviewWebsiteProject
 
             base.OnConfiguring(optionsBuilder);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        { 
+            modelBuilder.Entity<Product>().HasData(
+                {
+                id
+
+            }
+                
+                
+                )
+        
+        }
     }
 }
