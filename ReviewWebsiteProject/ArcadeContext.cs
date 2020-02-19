@@ -11,7 +11,7 @@ namespace ReviewWebsiteProject
     public class ArcadeContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
-        public DbSet<Review> Reviews { get; set; }
+        //public DbSet<Review> Reviews { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,16 +24,17 @@ namespace ReviewWebsiteProject
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        { 
+        {
             modelBuilder.Entity<Product>().HasData(
+                new Product
                 {
-                id
-
-            }
-                
-                
-                )
-        
+                    Id = 1,
+                    Name = "Yellow",
+                    Description = "fruit-eating monster",
+                    Review = "I bought this arcade game, now I hate ghosts",
+                    Image = "/img/GauntletLegends.jpg"
+                }
+                );
         }
     }
 }
