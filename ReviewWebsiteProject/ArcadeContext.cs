@@ -29,12 +29,28 @@ namespace ReviewWebsiteProject
                 new Product
                 {
                     Id = 1,
-                    Name = "Yellow",
-                    Description = "fruit-eating monster",
-                    Review = "I bought this arcade game, now I hate ghosts",
+                    Name = "Pac-Man",
+                    Description = "Yellow fruit-eating monster",
+                    Review = "I bought this arcade game, now I hate ghosts!",
+                    Image = "/img/pacman.jpg"
+                },
+                new Product
+                {
+                    Id = 2,
+                    Name = "Gauntlet Legends",
+                    Description = "Save the Realms from certain doom",
+                    Review = "Wtf I love this game?",
                     Image = "/img/GauntletLegends.jpg"
+                },
+                new Product
+                {
+                    Id = 3,
+                    Name = "DigDug",
+                    Description = "Dig and dug",
+                    Review = "Being inflated till you explode has got to hurt!",
+                    Image = "/img/digdug.jpg"
                 }
-                );
+                ) ;
         }
     }
 }
