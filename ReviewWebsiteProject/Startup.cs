@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ReviewWebsiteProject.Models;
+using ReviewWebsiteProject.Repositories;
 
 namespace ReviewWebsiteProject
 {
@@ -26,6 +28,8 @@ namespace ReviewWebsiteProject
         {
             services.AddMvc();
             services.AddDbContext<ArcadeContext>();
+            services.AddScoped<IRepository<Product>, ProductRepository>();
+            
            
         }
 
