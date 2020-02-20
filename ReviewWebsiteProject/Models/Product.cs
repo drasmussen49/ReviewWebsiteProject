@@ -11,7 +11,6 @@ namespace ReviewWebsiteProject.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public string Review { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
 
         public Product()
@@ -26,12 +25,11 @@ namespace ReviewWebsiteProject.Models
             Description = description;
         }
 
-        public Product(int id, string name, string description, string review, string image)
+        public Product(int id, string name, string description, string image)
         {
             Id = id;
             Name = name;
             Description = description;
-            Review = review;
             Image = image;
         }
     }

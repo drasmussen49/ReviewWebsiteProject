@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewWebsiteProject;
 
 namespace ReviewWebsiteProject.Migrations
 {
     [DbContext(typeof(ArcadeContext))]
-    partial class ArcadeContextModelSnapshot : ModelSnapshot
+    [Migration("20200220181515_AddedSeedReviewData")]
+    partial class AddedSeedReviewData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,6 +36,9 @@ namespace ReviewWebsiteProject.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Review")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Products");
@@ -44,21 +49,24 @@ namespace ReviewWebsiteProject.Migrations
                             Id = 1,
                             Description = "Yellow fruit-eating monster",
                             Image = "/img/pacman.jpg",
-                            Name = "Pac-Man"
+                            Name = "Pac-Man",
+                            Review = "I bought this arcade game, now I hate ghosts!"
                         },
                         new
                         {
                             Id = 2,
                             Description = "Save the Realms from certain doom",
                             Image = "/img/GauntletLegends.jpg",
-                            Name = "Gauntlet Legends"
+                            Name = "Gauntlet Legends",
+                            Review = "Wtf I love this game?"
                         },
                         new
                         {
                             Id = 3,
                             Description = "Dig and dug",
                             Image = "/img/digdug.jpg",
-                            Name = "DigDug"
+                            Name = "DigDug",
+                            Review = "Being inflated till you explode has got to hurt!"
                         });
                 });
 
