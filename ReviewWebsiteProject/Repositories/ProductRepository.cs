@@ -6,28 +6,28 @@ using ReviewWebsiteProject.Models;
 
 namespace ReviewWebsiteProject.Repositories
 {
-    public class ProductRepository : IRepository<ProductModel>
+    public class ProductRepository : IRepository<Product>
     {
-        public Dictionary<int, ProductModel> productDictionary;
+        private ArcadeContext db;
 
-        public ProductRepository()
+        public ProductRepository(ArcadeContext db)
         {
-            productDictionary = new Dictionary<int, ProductModel>()
-            {
-                {1, new ProductModel(1, "Pac-Man", "Yellow, fruit-eating monster", "I bought this arcade game, now I hate ghosts", "1.jpg")},
-                {2, new ProductModel(2, "Gauntlet Legends", "Save the Realms from certain doom", "Wtf I love this game", "2.jpg")},
-                {3, new ProductModel(3, "DigDug", "Dig and dug", "Being inflated until you explode has got to hurt!", "3.jpg")}
-            };
+            this.db = db;
         }
 
-        public IEnumerable<ProductModel> GetAll()
+        public object Count()
         {
-            return productDictionary.Values;
+            return db.Products.Count();
         }
 
-        public ProductModel GetById(int id)
+        public IEnumerable<Product> GetAll()
         {
-            return productDictionary[id];
+            return db.Products;
+        }
+
+        public Product GetById(int id)
+        {
+            return db.Products.Single(p => p.Id == id);
         }
     }
 }

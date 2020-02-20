@@ -5,32 +5,31 @@ using System.Threading.Tasks;
 
 namespace ReviewWebsiteProject.Models
 {
-    public class ProductModel
+    public class Product
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public string Review { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
 
-        public ProductModel()
+        public Product()
         {
 
         }
 
-        public ProductModel(int id, string name, string description)
+        public Product(int id, string name, string description)
         {
             Id = id;
             Name = name;
             Description = description;
         }
 
-        public ProductModel(int id, string name, string description, string review, string image)
+        public Product(int id, string name, string description, string image)
         {
             Id = id;
             Name = name;
             Description = description;
-            Review = review;
             Image = image;
         }
     }

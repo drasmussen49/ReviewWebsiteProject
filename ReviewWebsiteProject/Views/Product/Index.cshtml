@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ReviewWebsiteProject.Models.Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link href="//db.onlinewebfonts.com/c/335787aa6f57d71cabe8eb5dc89c6d6b?family=Blender+Pro" rel="stylesheet" type="text/css" />
+    <title>Index</title>
+</head>
+<body>
+    <h1 align="center">Our Products</h1>
+    <table class="table" align="center" border="3px">
+        @foreach (var product in Model)
+        {
+        <tr>
+            <td>  <h3>@product.Name</h3>
+                  <a href="/Product/Details/@product.Id">Details</a>
+                  <p>@product.Description</p>
+            </td>
+            <td>
+                <img class="img" src=@product.Image />
+            </td>
+            
+        </tr>
+        }
+    </table>
+
+</body>
+</html>

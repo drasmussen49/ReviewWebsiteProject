@@ -8,26 +8,29 @@ using System.Threading.Tasks;
 
 namespace ReviewWebsiteProject.Controllers
 {
-    public class ProductController : Controller
+
+    public class ReviewController : Controller
     {
-        IRepository<Product> productRepo;
-        public ProductController(IRepository<Product> productRepo)
+        IRepository<Review> reviewRepo;
+        public ReviewController(IRepository<Review> reviewRepo)
         {
-            this.productRepo = productRepo;
+            this.reviewRepo = reviewRepo;
         }
-        
+
         public ViewResult Index()
         {
-            var model = productRepo.GetAll();
+            var model = reviewRepo.GetAll();
 
             return View(model);
         }
 
         public ViewResult Details(int id)
         {
-            var model = productRepo.GetById(id);
+            var model = reviewRepo.GetById(id);
 
             return View(model);
         }
     }
+
 }
+
