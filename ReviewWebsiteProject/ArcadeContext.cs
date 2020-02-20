@@ -50,7 +50,28 @@ namespace ReviewWebsiteProject
                     Review = "Being inflated till you explode has got to hurt!",
                     Image = "/img/digdug.jpg"
                 }
-                ) ;
+
+                );
+
+            modelBuilder.Entity<Review>().HasData(
+                new Review
+                {
+                Id = 1,
+                Content = "Tasty",
+                ProductId = 1,
+                },
+                new Review
+                {
+                Id = 2,
+                Content = "Not Tasty",
+                ProductId = 1,
+                },
+                new Review
+                {
+                Id = 3,
+                Content = "Tastiest",
+                ProductId = 1,
+                });
         }
     }
 }
