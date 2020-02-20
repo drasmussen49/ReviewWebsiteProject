@@ -8,15 +8,25 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link href="//db.onlinewebfonts.com/c/335787aa6f57d71cabe8eb5dc89c6d6b?family=Blender+Pro" rel="stylesheet" type="text/css" />
+    <title>Details</title>
 
 </head>
 <body>
-    <h2>Name: @Model.Name</h2>
+    <h2 align="center">Name: @Model.Name</h2>
     <p>Description: @Model.Description</p>
     <div>
         <img class="img" src=@Model.Image />
+    </div>
+    <div class="ReviewBox">
+        <h3>Reviews</h3>
+        <ul>
+        @foreach(var review in Model.Reviews)
+        {
+            <li>@review.Content</li>
+        }
+        </ul>
     </div>
     <a href="/Product/Index">Back to all products</a>
 </body>
