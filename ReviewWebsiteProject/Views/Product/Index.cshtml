@@ -14,18 +14,19 @@
 </head>
 <body>
     <h1>Our Products</h1>
-    <div class="products">
-        @foreach (var product in Model)
-        {
-        <ul class="list">
-            <li>@product.Name</li>
-            <li><a href="/Product/Details/@product.Id">Details</a></li>
-            <li>@product.Description</li>
-            <li><img class="img" src=@product.Image /></li>
-        </ul>
-            
 
-        }
+    @foreach (var product in Model)
+    {
+        <div class="products">
+            <ul class="list">
+                <li>@product.Name</li>
+                <li>@product.Description</li>
+                <li><a href="/Product/Details/@product.Id">Details</a></li>
+
+            </ul>
+            <img class="img" src=@product.Image />
+        </div>
+    }
     </div>
 
 </body>

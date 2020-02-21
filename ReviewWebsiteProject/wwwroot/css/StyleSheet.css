@@ -6,16 +6,21 @@
 
 .img {
     width: 130px;
+ 
 }
 .products {
-display:grid;
-grid-column: 1 fr;
-}
-.list {
+    display: grid;
+    grid-column: 1 fr;
     border-top: solid;
     border-bottom: solid;
     border-left: solid;
     border-right: solid;
+}
+.list {
+    
+}
+li{
+
 }
 
 
