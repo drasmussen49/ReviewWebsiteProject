@@ -13,21 +13,23 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>Our Products</h1>
-
-    @foreach (var product in Model)
-    {
-        <div class="products">
-            <ul class="list">
-                <li>@product.Name</li>
-                <li>@product.Description</li>
-                <li><a href="/Product/Details/@product.Id">Details</a></li>
-
-            </ul>
-            <img class="img" src=@product.Image />
+    <header> Our Project </header>
+    <div class="column">
+        <div class="row">
+           
+            @foreach (var product in Model)
+            {
+                <div class="column">
+                    <h3>@product.Name</h3>
+                    <a href="/Product/Details/@product.Id">Details</a>
+                    <p>@product.Description</p>
+                 
+                    <img class="img" src=@product.Image />
+                </div>
+            }
         </div>
-    }
     </div>
-
+    <footer>Tom Ghassan Eric Dan </footer>
 </body>
 </html>
+
