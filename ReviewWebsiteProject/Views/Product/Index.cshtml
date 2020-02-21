@@ -14,21 +14,18 @@
 </head>
 <body>
     <h1>Our Products</h1>
-    <table class="table" align="center" border="3px">
+    <div>
         @foreach (var product in Model)
         {
-        <tr>
-            <td>  <h3>@product.Name</h3>
-                  <a href="/Product/Details/@product.Id">Details</a>
-                  <p>@product.Description</p>
-            </td>
-            <td>
-                <img class="img" src=@product.Image />
-            </td>
-            
-        </tr>
+            <ul>
+                <li>@product.Name</li>
+                <li><a href="/Product/Details/@product.Id">Details</a></li>
+                <li>@product.Description</li>
+            </ul>
+            <img class="img" src=@product.Image />
+
         }
-    </table>
+    </div>
 
 </body>
 </html>
