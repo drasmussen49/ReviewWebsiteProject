@@ -13,23 +13,22 @@
     <title>Index</title>
 </head>
 <body>
-    <header> Our Project </header>
-    <div class="column">
-        <div class="row">
+    <div class="header"> Our Project </div>
+    <div class="body">
+        <div class="flex-container">
            
             @foreach (var product in Model)
             {
-                <div class="column">
-                    <h3>@product.Name</h3>
-                    <a href="/Product/Details/@product.Id">Details</a>
-                    <p>@product.Description</p>
-                 
+                <div class="flex-item">
+                    <h3 class="flex-element">@product.Name</h3>
+                    <a href="/Product/Details/@product.Id" class="flex-element">Details</a>
+                    <p class="flex-element">@product.Description</p>
                     <img class="img" src=@product.Image />
                 </div>
             }
         </div>
     </div>
-    <footer>Tom Ghassan Eric Dan </footer>
+    <div class="footer">Tom Ghassan Eric Dan </div>
 </body>
 </html>
 
