@@ -31,7 +31,12 @@ namespace ReviewWebsiteProject.Controllers
             return View(model);
         }
         [HttpGet]
-        public ViewResult Create(int id)
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ViewResult CreateByProductId(int id)
         {
             ViewBag.ProductId = id;
             return View();
@@ -40,7 +45,7 @@ namespace ReviewWebsiteProject.Controllers
         public ActionResult Create(Review review)
         {
             reviewRepo.Create(review);
-            return RedirectToAction("Index","Product");
+            return RedirectToAction("Details","Product", new { id = review.ProductId } );
         }
     }
 
