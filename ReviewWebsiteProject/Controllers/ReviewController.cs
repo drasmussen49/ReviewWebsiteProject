@@ -39,7 +39,7 @@ namespace ReviewWebsiteProject.Controllers
         public ActionResult Create(Review review)
         {
             reviewRepo.Create(review);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Product");
         }
     }
 

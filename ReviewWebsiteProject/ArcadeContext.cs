@@ -87,6 +87,7 @@ namespace ReviewWebsiteProject
                 Content = "This game has inspired me to dig to China. I really think I can make it.",
                 ProductId = 3,
                 });
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
