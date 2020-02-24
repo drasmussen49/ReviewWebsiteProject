@@ -20,6 +20,11 @@ namespace ReviewWebsiteProject.Repositories
             return db.Products.Count();
         }
 
+        public void Create(Product obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Product> GetAll()
         {
             return db.Products;
