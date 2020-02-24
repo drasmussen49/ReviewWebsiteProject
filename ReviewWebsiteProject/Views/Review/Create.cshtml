@@ -32,11 +32,11 @@
                     <input asp-for="Content" class="form-control" />
                     <span asp-validation-for="Content" class="text-danger"></span>
                 </div>
-                <div class="form-group">
+                @*<div class="form-group">
                     <label asp-for="ProductId" class="control-label"></label>
                     <input asp-for="ProductId" class="form-control" />
                     <span asp-validation-for="ProductId" class="text-danger"></span>
-                </div>
+                </div>*@
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
                 </div>
@@ -46,7 +46,8 @@
 
     <div>
         @*<input type='button' onclick='history.go(-1);' value='Go back' />*@
-        @Html.ActionLink("BACK", "Details", "Product", new { id = Model.ProductId }, null)
+        <a href="/Product/Details/@ViewBag.ProductId" > Go Back </a>
+      
     </div>
 
 </body>
