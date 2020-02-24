@@ -30,6 +30,17 @@ namespace ReviewWebsiteProject.Controllers
 
             return View(model);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Review review)
+        {
+            reviewRepo.Create(review);
+            return RedirectToAction("Index");
+        }
     }
 
 }
