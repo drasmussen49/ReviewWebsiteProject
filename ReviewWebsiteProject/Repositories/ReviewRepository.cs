@@ -29,5 +29,15 @@ namespace ReviewWebsiteProject.Repositories
         {
             return db.Reviews.Single(r => r.Id == id);
         }
+        public void Update(Review review)
+        {
+            db.Reviews.Update(review);
+            db.SaveChanges();
+        }
+        public void Delete(Review review)
+        {
+            db.Reviews.Remove(review);
+            db.SaveChanges();
+        }
     }
 }
