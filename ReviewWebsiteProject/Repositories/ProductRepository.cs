@@ -34,5 +34,10 @@ namespace ReviewWebsiteProject.Repositories
         {
             return db.Products.Single(p => p.Id == id);
         }
+
+        public void Update(Product obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

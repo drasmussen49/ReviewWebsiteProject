@@ -47,6 +47,22 @@ namespace ReviewWebsiteProject.Controllers
             reviewRepo.Create(review);
             return RedirectToAction("Details","Product", new { id = review.ProductId } );
         }
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Review model = reviewRepo.GetById(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Update(Review review)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            reviewRepo.Update(review);
+            return RedirectToAction("Details", "Product", new { id = review.ProductId });
+        }
     }
 
 }
