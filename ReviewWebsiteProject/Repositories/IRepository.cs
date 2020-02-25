@@ -9,5 +9,6 @@ namespace ReviewWebsiteProject.Repositories
     {
         IEnumerable<T> GetAll();
         T GetById(int id);
+        void Create(T obj);
     }
 }

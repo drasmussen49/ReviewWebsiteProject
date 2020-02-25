@@ -15,6 +15,12 @@ namespace ReviewWebsiteProject.Repositories
             this.db = db;
         }
 
+        public void Create(Review review)
+        {
+            db.Reviews.Add(review);
+            db.SaveChanges();
+        }
+
         public IEnumerable<Review> GetAll()
         {
             return db.Reviews;

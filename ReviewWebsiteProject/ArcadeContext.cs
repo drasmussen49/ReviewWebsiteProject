@@ -54,21 +54,40 @@ namespace ReviewWebsiteProject
                 new Review
                 {
                 Id = 1,
-                Content = "Tasty",
+                Content = "I Love this game. I feel like I can now conquer the world. But i'm still scared of ghosts.",
                 ProductId = 1,
                 },
                 new Review
                 {
-                Id = 2,
-                Content = "Not Tasty",
+                    Id = 2,
+                    Content = "These pac-man are so cute!!. I wondered though if they'll ever get full.",
+                    ProductId = 1,
+                },
+                new Review
+                {
+                    Id = 3,
+                    Content = "This game really brought me back to my past life as a medieval serf taking over my fiefdom! ",
+                    ProductId = 2,
+                },
+                new Review
+                {
+                Id = 4,
+                Content = "Beware of this game. You will have nightmares for the next year. Play this game with caution.",
                 ProductId = 2,
                 },
                 new Review
                 {
-                Id = 3,
-                Content = "Tastiest",
-                ProductId = 1,
+                    Id = 5,
+                    Content = "This game just makes me want to sing, \"Digdug, digidigidug, digdug, digidigidug.\"",
+                    ProductId = 3,
+                },
+                new Review
+                {
+                Id = 6,
+                Content = "This game has inspired me to dig to China. I really think I can make it.",
+                ProductId = 3,
                 });
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
