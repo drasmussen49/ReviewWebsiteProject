@@ -30,6 +30,56 @@ namespace ReviewWebsiteProject.Controllers
 
             return View(model);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ViewResult CreateByProductId(int id)
+        {
+            ViewBag.ProductId = id;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Review review)
+        {
+            reviewRepo.Create(review);
+            return RedirectToAction("Details","Product", new { id = review.ProductId } );
+        }
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Review model = reviewRepo.GetById(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Update(Review review)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            reviewRepo.Update(review);
+            return RedirectToAction("Details", "Product", new { id = review.ProductId });
+        }
+        [HttpGet]
+        public ViewResult Delete(int id)
+        { 
+            Review model = reviewRepo.GetById(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Delete(Review review)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            var tempId = review.ProductId;
+            reviewRepo.Delete(review);
+            return RedirectToAction("Details", "Product", new { id = tempId});
+        }
     }
 
 }

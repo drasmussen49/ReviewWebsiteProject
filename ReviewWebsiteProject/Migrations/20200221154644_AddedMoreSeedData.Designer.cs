@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewWebsiteProject;
 
 namespace ReviewWebsiteProject.Migrations
 {
     [DbContext(typeof(ArcadeContext))]
-    partial class ArcadeContextModelSnapshot : ModelSnapshot
+    [Migration("20200221154644_AddedMoreSeedData")]
+    partial class AddedMoreSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -72,12 +74,6 @@ namespace ReviewWebsiteProject.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Date")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
@@ -92,48 +88,36 @@ namespace ReviewWebsiteProject.Migrations
                         {
                             Id = 1,
                             Content = "I Love this game. I feel like I can now conquer the world. But i'm still scared of ghosts.",
-                            Date = "25/02/2020",
-                            Name = "Tom",
                             ProductId = 1
                         },
                         new
                         {
                             Id = 2,
                             Content = "These pac-man are so cute!!. I wondered though if they'll ever get full.",
-                            Date = "25/02/2020",
-                            Name = "Dan",
                             ProductId = 1
                         },
                         new
                         {
                             Id = 3,
                             Content = "This game really brought me back to my past life as a medieval serf taking over my fiefdom! ",
-                            Date = "25/02/2020",
-                            Name = "Ghassan",
                             ProductId = 2
                         },
                         new
                         {
                             Id = 4,
                             Content = "Beware of this game. You will have nightmares for the next year. Play this game with caution.",
-                            Date = "25/02/2020",
-                            Name = "Eric",
                             ProductId = 2
                         },
                         new
                         {
                             Id = 5,
                             Content = "This game just makes me want to sing, \"Digdug, digidigidug, digdug, digidigidug.\"",
-                            Date = "25/02/2020",
-                            Name = "Jen",
                             ProductId = 3
                         },
                         new
                         {
                             Id = 6,
                             Content = "This game has inspired me to dig to China. I really think I can make it.",
-                            Date = "25/02/2020",
-                            Name = "Andy",
                             ProductId = 3
                         });
                 });

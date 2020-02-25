@@ -20,6 +20,16 @@ namespace ReviewWebsiteProject.Repositories
             return db.Products.Count();
         }
 
+        public void Create(Product obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Product obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Product> GetAll()
         {
             return db.Products;
@@ -28,6 +38,11 @@ namespace ReviewWebsiteProject.Repositories
         public Product GetById(int id)
         {
             return db.Products.Single(p => p.Id == id);
+        }
+
+        public void Update(Product obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

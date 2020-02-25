@@ -1,0 +1,54 @@
+﻿@model ReviewWebsiteProject.Models.Review
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h4>@Model.Product.Name Review</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Update">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    @*<label asp-for="Id" class="control-label"></label>*@
+                    <input asp-for="Id" type="hidden" class="form-control" />
+                    @*<span asp-validation-for="Id" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <div><label class="control-label">The Review:</label></div>
+                    <textarea asp-for="Content" class="form-control" cols="30" rows="10"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    @*<label asp-for="ProductId" class="control-label"></label>*@
+                    <input asp-for="ProductId" type="hidden" class="form-control" />
+                    @*<span asp-validation-for="ProductId" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <br>
+        <a href="/Product/Details/@Model.ProductId">Back to Details</a>
+        <a asp-action="Index"></a>
+    </div>
+
+</body>
+</html>
