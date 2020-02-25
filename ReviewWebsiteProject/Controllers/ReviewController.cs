@@ -65,7 +65,7 @@ namespace ReviewWebsiteProject.Controllers
         }
         [HttpGet]
         public ViewResult Delete(int id)
-        {
+        { 
             Review model = reviewRepo.GetById(id);
             return View(model);
         }
@@ -76,8 +76,9 @@ namespace ReviewWebsiteProject.Controllers
             {
                 return View();
             }
+            var tempId = review.ProductId;
             reviewRepo.Delete(review);
-            return RedirectToAction("Details", "Product", new { id = review.ProductId });
+            return RedirectToAction("Details", "Product", new { id = tempId});
         }
     }
 
