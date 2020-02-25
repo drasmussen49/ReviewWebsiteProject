@@ -38,8 +38,9 @@
         <form asp-action="Delete" method="post">
             <input type="submit" value="Delete" class="btn btn-danger" /> |
             <input type="hidden" value="@Model.ProductId" asp-for="ProductId">
-            <a asp-action="Index">Back to List</a>
+            <a asp-action="Index"></a>
         </form>
+        <a href="/Product/Details/@Model.Id">Go Back</a>
     </div>
 </body>
 </html>
