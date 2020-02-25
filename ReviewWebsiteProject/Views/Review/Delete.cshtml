@@ -22,7 +22,7 @@
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Content)
+                <p>The Review:</p>
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Content)
@@ -34,6 +34,7 @@
             <input type="hidden" value="@Model.ProductId" asp-for="ProductId">
             <a asp-action="Index"></a>
         </form>
+        <br />
         <a href="/Product/Details/@Model.ProductId">Go Back</a>
     </div>
 </body>

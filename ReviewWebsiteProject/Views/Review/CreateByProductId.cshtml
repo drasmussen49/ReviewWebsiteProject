@@ -23,8 +23,18 @@
             <form asp-action="Create" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="Content" class="control-label"></label>
-                    <input asp-for="Content" class="form-control" />
+                    <label class="control-label">Reviewer Name:</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    @*<label asp-for="Date" type="hidden" class="control-label"></label>*@
+                    <input asp-for="Date" value="@DateTime.Now.ToString("dd/MM/yyyy")"type="hidden" class="form-control" />
+                    <span asp-validation-for="Date" type="hidden" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div><label asp-for="Content" class="control-label"></label></div>
+                    <textarea asp-for="Content" class="form-control" cols="30" rows="10"></textarea>
                     <span asp-validation-for="Content" class="text-danger"></span>
                 </div>
                 <div class="form-group">
