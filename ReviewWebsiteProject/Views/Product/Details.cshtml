@@ -25,6 +25,7 @@
             @foreach (var review in Model.Reviews)
             {
                 <li>@review.Content</li>
+                <a href="/Review/Update/@review.Id/" class="button">Update this review!</a>
             }
         </ul>
         <fieldset class="rating">
