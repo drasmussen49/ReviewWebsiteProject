@@ -20,15 +20,17 @@
         <img class="img" src=@Model.Image />
     </div>
     <div class="ReviewBox">
-        <h3>Reviews</h3>
-        <ul>
-            @foreach (var review in Model.Reviews)
-            {
-                <li>@review.Content</li>
-                <a href="/Review/Update/@review.Id/" class="button">Update this review!</a>
-                <a href="/Review/Delete/@review.Id/" class="button">Delete this review!</a>
-            }
-        </ul>
+        <h3><u>Reviews</u></h3>
+        @foreach (var review in Model.Reviews)
+        {
+            <h4>@review.Name on @review.Date</h4>
+            <p>@review.Content</p>
+
+            <a href="/Review/Update/@review.Id/" class="button">Update this review!</a>
+            <a href="/Review/Delete/@review.Id/" class="button">Delete this review!</a>
+            <hr>
+        }
+
         <fieldset class="rating">
             <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
             <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
