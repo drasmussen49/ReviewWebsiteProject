@@ -1,11 +1,9 @@
 ﻿body {
     font-family: 'Tomorrow', 'sans-serif';
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
-.body {
 
-}
 
 * {
     box-sizing: border-box;
