@@ -32,21 +32,21 @@
         </section>
     </header>
 
-                <div class="body">
-                    <div class="flex-container">
+    <div class="body">
+        <div class="flex-container">
 
-                        @foreach (var product in Model)
-                        {
-                            <div class="flex-item">
-                                <h3 class="flex-element">@product.Name</h3>
-                                <a href="/Product/Details/@product.Id" class="flex-element">Details</a>
-                                <p class="flex-element">@product.Description</p>
-                                <img class="img" src=@product.Image />
-                            </div>
-                        }
-                    </div>
+            @foreach (var product in Model)
+            {
+                <div class="flex-item">
+                    <h3 class="flex-element">@product.Name</h3>
+                    <a href="/Product/Details/@product.Id" class="flex-element">Details</a>
+                    <p class="flex-element">@product.Description</p>
+                    <img class="img" src=@product.Image />
                 </div>
-          <footer>Tom Ghassan Eric Dan </footer>
+            }
+        </div>
+    </div>
+    <div id="footer">Tom Ghassan Eric Dan </div>
 </body>
 </html>
 
