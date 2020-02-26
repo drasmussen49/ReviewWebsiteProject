@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewWebsiteProject;
 
 namespace ReviewWebsiteProject.Migrations
 {
     [DbContext(typeof(ArcadeContext))]
-    partial class ArcadeContextModelSnapshot : ModelSnapshot
+    [Migration("20200226170445_ChangedImageToPNG")]
+    partial class ChangedImageToPNG
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,7 +44,7 @@ namespace ReviewWebsiteProject.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Yellow fruit-eating monster enjoys cherries but not ghosts",
+                            Description = "Yellow fruit-eating monster",
                             Image = "/img/pacman.jpg",
                             Name = "Pac-Man"
                         },
@@ -56,51 +58,9 @@ namespace ReviewWebsiteProject.Migrations
                         new
                         {
                             Id = 3,
-                            Description = "Dig underground and defeat enemies in a maze",
-                            Image = "/img/digdug.png",
+                            Description = "Dig and dug",
+                            Image = "/img/digdug.jpg",
                             Name = "DigDug"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Italian plumber battles evil turtles to save the princess",
-                            Image = "/img/supermariobros.jpg",
-                            Name = "Super Mario"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Battle to the death in this blood fighting game",
-                            Image = "/img/mortalkombat.jpg",
-                            Name = "Mortal Kombat"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Description = "Insane frog attempts to cross new york style traffic",
-                            Image = "/img/frogger.jpg",
-                            Name = "Frogger"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Description = "Attractive hero saves the world from evil dictator",
-                            Image = "/img/timecrisis.jpg",
-                            Name = "Time Crisis"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Description = "Defeat Aliens that have escaped from Area 51",
-                            Image = "/img/area51.jpg",
-                            Name = "Area 51"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Description = "Racing game with awesome stunt tracks",
-                            Image = "/img/sanfranciscorush.jpg",
-                            Name = "San Francisco Rush"
                         });
                 });
 

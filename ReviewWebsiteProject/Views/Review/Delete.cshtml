@@ -22,7 +22,7 @@
         <hr />
         <div class="form-group">
             <label class="control-label">Reviewer Name:</label>
-            <input readonly asp-for="Name" class="form-control" />
+            <label class="control-label">@Model.Name</label>
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <dl class="row">
@@ -35,12 +35,12 @@
         </dl>
 
         <form asp-action="Delete" method="post">
-            <input type="submit" value="Delete" class="btn btn-danger" />
+            <input type="submit" value="Delete" class="btn btn-white btn-animated" />
             <input type="hidden" value="@Model.ProductId" asp-for="ProductId">
             <a asp-action="Index"></a>
         </form>
         <br />
-        <a href="/Product/Details/@Model.ProductId">Go Back</a>
+        <a href="/Product/Details/@Model.ProductId" class="btn btn-white btn-animated">Go Back</a>
     </div>
 </body>
 </html>

@@ -37,15 +37,15 @@ namespace ReviewWebsiteProject
                 {
                     Id = 2,
                     Name = "Gauntlet Legends",
-                    Description = "Save the realms from certain doom",
-                    Image = "/img/GauntletLegends.jpg"
+                    Description = "Save the Realms from certain doom",
+                    Image = "/img/GauntletLegends.png"
                 },
                 new Product
                 {
                     Id = 3,
                     Name = "DigDug",
                     Description = "Dig underground and defeat enemies in a maze",
-                    Image = "/img/digdug.jpg"
+                    Image = "/img/digdug.png"
                 },
                 new Product
                 {
