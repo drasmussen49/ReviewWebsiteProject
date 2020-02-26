@@ -86,7 +86,7 @@ namespace ReviewWebsiteProject
                 {
                     Id = 9,
                     Name = "San Francisco Rush",
-                    Description = "",
+                    Description = "Racing game with awesome stunt tracks",
                     Image = "/img/digdug.jpg"
                 }
                 );
