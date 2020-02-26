@@ -49,15 +49,15 @@ namespace ReviewWebsiteProject.Migrations
                         new
                         {
                             Id = 2,
-                            Description = "Save the Realms from certain doom",
-                            Image = "/img/GauntletLegends.png",
+                            Description = "Save the realms from certain doom",
+                            Image = "/img/GauntletLegends.jpg",
                             Name = "Gauntlet Legends"
                         },
                         new
                         {
                             Id = 3,
                             Description = "Dig underground and defeat enemies in a maze",
-                            Image = "/img/digdug.png",
+                            Image = "/img/digdug.jpg",
                             Name = "DigDug"
                         },
                         new

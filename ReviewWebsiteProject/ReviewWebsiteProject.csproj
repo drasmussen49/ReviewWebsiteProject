@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200226194515_MergedMigration.cs" />
+    <Compile Remove="Migrations\20200226194515_MergedMigration.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\img\GauntletLegends.jpg" />
   </ItemGroup>
 
