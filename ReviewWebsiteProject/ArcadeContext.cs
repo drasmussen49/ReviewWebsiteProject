@@ -49,13 +49,11 @@ namespace ReviewWebsiteProject
                 }
 
                 );
-            string date = DateTime.Now.ToString("dd/MM/yyyy");
             modelBuilder.Entity<Review>().HasData(
                 new Review
                 {
                     Id = 1,
                     Name = "Tom",
-                    Date = date,
                     Content = "I Love this game. I feel like I can now conquer the world. But i'm still scared of ghosts.",
                     ProductId = 1,
                 },
@@ -63,7 +61,6 @@ namespace ReviewWebsiteProject
                 {
                     Id = 2,
                     Name = "Dan",
-                    Date = date,
                     Content = "These pac-man are so cute!!. I wondered though if they'll ever get full.",
                     ProductId = 1,
                 },
@@ -71,7 +68,6 @@ namespace ReviewWebsiteProject
                 {
                     Id = 3,
                     Name = "Ghassan",
-                    Date = date,
                     Content = "This game really brought me back to my past life as a medieval serf taking over my fiefdom! ",
                     ProductId = 2,
                 },
@@ -79,7 +75,6 @@ namespace ReviewWebsiteProject
                 {
                     Id = 4,
                     Name = "Eric",
-                    Date = date,
                     Content = "Beware of this game. You will have nightmares for the next year. Play this game with caution.",
                     ProductId = 2,
                 },
@@ -87,7 +82,6 @@ namespace ReviewWebsiteProject
                 {
                     Id = 5,
                     Name = "Jen",
-                    Date = date,
                     Content = "This game just makes me want to sing, \"Digdug, digidigidug, digdug, digidigidug.\"",
                     ProductId = 3,
                 },
@@ -95,7 +89,6 @@ namespace ReviewWebsiteProject
                 {
                     Id = 6,
                     Name = "Andy",
-                    Date = date,
                     Content = "This game has inspired me to dig to China. I really think I can make it.",
                     ProductId = 3,
                 }) ;
