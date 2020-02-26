@@ -45,7 +45,7 @@ namespace ReviewWebsiteProject
                     Id = 3,
                     Name = "DigDug",
                     Description = "Dig and dug",
-                    Image = "/img/digdug.jpg"
+                    Image = "/img/digdug.png"
                 }
 
                 );
