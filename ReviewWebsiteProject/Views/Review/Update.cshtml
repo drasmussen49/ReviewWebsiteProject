@@ -25,6 +25,7 @@
                 <div class="form-group">
                     <label class="control-label">Reviewer Name:</label>
                     <label class="control-label">@Model.Name</label>
+                    <input type="hidden" asp-for="Name" value=@Model.Name>
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="form-group">
