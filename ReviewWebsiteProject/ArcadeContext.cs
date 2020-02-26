@@ -52,42 +52,42 @@ namespace ReviewWebsiteProject
                     Id = 4,
                     Name = "Super Mario",
                     Description = "Italian plumber battles evil turtles to save the princess",
-                    Image = "/img/digdug.jpg"
+                    Image = "/img/supermariobros.jpg"
                 },
                 new Product
                 {
                     Id = 5,
                     Name = "Mortal Kombat",
                     Description = "Battle to the death in this blood fighting game",
-                    Image = "/img/digdug.jpg"
+                    Image = "/img/mortalkombat.jpg"
                 },
                 new Product
                 {
                     Id = 6,
                     Name = "Frogger",
                     Description = "Insane frog attempts to cross new york style traffic",
-                    Image = "/img/digdug.jpg"
+                    Image = "/img/frogger.jpg"
                 },
                 new Product
                 {
                     Id = 7,
                     Name = "Time Crisis",
                     Description = "Attractive hero saves the world from evil dictator",
-                    Image = "/img/digdug.jpg"
+                    Image = "/img/timecrisis.jpg"
                 },
                 new Product
                 {
                     Id = 8,
                     Name = "Area 51",
                     Description = "Defeat Aliens that have escaped from Area 51",
-                    Image = "/img/digdug.jpg"
+                    Image = "/img/area51.jpg"
                 },
                 new Product
                 {
                     Id = 9,
                     Name = "San Francisco Rush",
                     Description = "Racing game with awesome stunt tracks",
-                    Image = "/img/digdug.jpg"
+                    Image = "/img/sanfranciscorush.jpg"
                 }
                 );
             modelBuilder.Entity<Review>().HasData(
