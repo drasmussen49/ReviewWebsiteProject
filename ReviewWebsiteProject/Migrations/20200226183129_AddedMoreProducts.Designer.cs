@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewWebsiteProject;
 
 namespace ReviewWebsiteProject.Migrations
 {
     [DbContext(typeof(ArcadeContext))]
-    partial class ArcadeContextModelSnapshot : ModelSnapshot
+    [Migration("20200226183129_AddedMoreProducts")]
+    partial class AddedMoreProducts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,42 +66,42 @@ namespace ReviewWebsiteProject.Migrations
                         {
                             Id = 4,
                             Description = "Italian plumber battles evil turtles to save the princess",
-                            Image = "/img/supermariobros.jpg",
+                            Image = "/img/digdug.jpg",
                             Name = "Super Mario"
                         },
                         new
                         {
                             Id = 5,
                             Description = "Battle to the death in this blood fighting game",
-                            Image = "/img/mortalkombat.jpg",
+                            Image = "/img/digdug.jpg",
                             Name = "Mortal Kombat"
                         },
                         new
                         {
                             Id = 6,
                             Description = "Insane frog attempts to cross new york style traffic",
-                            Image = "/img/frogger.jpg",
+                            Image = "/img/digdug.jpg",
                             Name = "Frogger"
                         },
                         new
                         {
                             Id = 7,
                             Description = "Attractive hero saves the world from evil dictator",
-                            Image = "/img/timecrisis.jpg",
+                            Image = "/img/digdug.jpg",
                             Name = "Time Crisis"
                         },
                         new
                         {
                             Id = 8,
                             Description = "Defeat Aliens that have escaped from Area 51",
-                            Image = "/img/area51.jpg",
+                            Image = "/img/digdug.jpg",
                             Name = "Area 51"
                         },
                         new
                         {
                             Id = 9,
                             Description = "Racing game with awesome stunt tracks",
-                            Image = "/img/sanfranciscorush.jpg",
+                            Image = "/img/digdug.jpg",
                             Name = "San Francisco Rush"
                         });
                 });
