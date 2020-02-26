@@ -163,26 +163,6 @@
         animation-timing-function: ease-out;
     }
 
-    .footer2 {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 100px;
-        position: absolute;
-        top: 200%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index: -1;
-        transition: all .6s;
-        color: #fff;
-        animation: moveInBoton .5s ease-out 5s;
-        animation-fill-mode: backwards;
-        animation-duration: 4s;
-        animation-delay: 7s;
-        animation-iteration-count: 1;
-    }
-
 @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -302,58 +282,88 @@
     }
 }
 
-.body {
-    min-height: 100%;
-    margin-bottom: -330px;
-    position: relative;
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
 }
+
+
+
+hr {
+    display: block;
+    background: #00ff33;
+    margin: 0 auto;
+    height: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+    .body {
+        min-height: 100%;
+        margin-bottom: -330px;
+        position: relative;
+    }
 
     .body > .flex-container {
         display: flex;
         flex-flow: row wrap;
         padding-top: 25px;
         justify-content: space-between;
-
     }
 
 
-.flex-container > .flex-item {
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right bottom, rgb(9, 0, 128, 0.5), #09099D);
-    color: whitesmoke;
-    width: 30%;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    -moz-box-shadow: 0px 6px 5px rgb(121, 118, 118);
-    -webkit-box-shadow: 0px 6px 5px rgb(121, 118, 118);
-    box-shadow: 0px 6px 5px rgb(121, 118, 118);
-    -moz-border-radius: 15px 50px 30px;
-    -webkit-border-radius: 15px 50px 30px;
-    border-radius: 15px 50px 30px;
-}
+    .flex-container > .flex-item {
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to right bottom, rgb(9, 0, 128, 0.5), #09099D);
+        color: whitesmoke;
+        width: 30%;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        -moz-box-shadow: 0px 6px 5px rgb(121, 118, 118);
+        -webkit-box-shadow: 0px 6px 5px rgb(121, 118, 118);
+        box-shadow: 0px 6px 5px rgb(121, 118, 118);
+        -moz-border-radius: 15px 50px 30px;
+        -webkit-border-radius: 15px 50px 30px;
+        border-radius: 15px 50px 30px;
+    }
 
-.flex-item > .img {
-    align-self: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+    .flex-item > .img {
+        align-self: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
     #footer {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    height: 30px;
-    width: 100%;
-    background: #999;
-}
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        height: 30px;
+        width: 100%;
+        background: #999;
+    }
 
     fieldset, label {
         margin: 0;
         padding: 0;
     }
-
     /****** Style Star Rating Widget *****/
     .rating {
         border: none;
