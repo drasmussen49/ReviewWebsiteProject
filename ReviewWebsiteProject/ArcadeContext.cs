@@ -38,7 +38,7 @@ namespace ReviewWebsiteProject
                     Id = 2,
                     Name = "Gauntlet Legends",
                     Description = "Save the Realms from certain doom",
-                    Image = "/img/GauntletLegends.jpg"
+                    Image = "/img/GauntletLegends.png"
                 },
                 new Product
                 {

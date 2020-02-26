@@ -329,16 +329,16 @@
     -moz-box-shadow: 0px 6px 5px rgb(121, 118, 118);
     -webkit-box-shadow: 0px 6px 5px rgb(121, 118, 118);
     box-shadow: 0px 6px 5px rgb(121, 118, 118);
-    -moz-border-radius: 230px;
-    -webkit-border-radius: 230px;
-    border-radius: 230px;
+    -moz-border-radius: 15px 50px 30px;
+    -webkit-border-radius: 15px 50px 30px;
+    border-radius: 15px 50px 30px;
 }
 
-    .flex-item > .img {
-        align-self: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+.flex-item > .img {
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
     #footer {
     position: fixed;
