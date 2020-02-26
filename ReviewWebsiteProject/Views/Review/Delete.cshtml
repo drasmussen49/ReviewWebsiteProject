@@ -20,6 +20,11 @@
     <div>
         <h4>@Model.Product.Name Review</h4>
         <hr />
+        <div class="form-group">
+            <label class="control-label">Reviewer Name:</label>
+            <input readonly asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
         <dl class="row">
             <dt class="col-sm-2">
                 <p>The Review:</p>
