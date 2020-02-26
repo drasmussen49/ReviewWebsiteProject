@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewWebsiteProject;
 
 namespace ReviewWebsiteProject.Migrations
 {
     [DbContext(typeof(ArcadeContext))]
-    partial class ArcadeContextModelSnapshot : ModelSnapshot
+    [Migration("20200226190021_AddedPicsToSeedData")]
+    partial class AddedPicsToSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,15 +51,15 @@ namespace ReviewWebsiteProject.Migrations
                         new
                         {
                             Id = 2,
-                            Description = "Save the Realms from certain doom",
-                            Image = "/img/GauntletLegends.png",
+                            Description = "Save the realms from certain doom",
+                            Image = "/img/GauntletLegends.jpg",
                             Name = "Gauntlet Legends"
                         },
                         new
                         {
                             Id = 3,
                             Description = "Dig underground and defeat enemies in a maze",
-                            Image = "/img/digdug.png",
+                            Image = "/img/digdug.jpg",
                             Name = "DigDug"
                         },
                         new
