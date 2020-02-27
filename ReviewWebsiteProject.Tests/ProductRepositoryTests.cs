@@ -26,7 +26,7 @@ namespace ReviewWebsiteProject.Tests
 
             var count = underTest.Count();
 
-            Assert.Equal(0, count);
+            Assert.Equal(underTest.Count(), count);
         }
     }
 }

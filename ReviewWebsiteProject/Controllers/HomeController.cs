@@ -12,5 +12,9 @@ namespace ReviewWebsiteProject.Controllers
         {
             return View();
         }
+        public ViewResult AboutUs()
+        {
+            return View();
+        }
     }
 }

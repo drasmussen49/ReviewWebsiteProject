@@ -8,48 +8,55 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="stylesheet" href="~/css/details.css" />
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
-    <title>Details</title>
+    <title>Product Details</title>
 
 </head>
-<body>
-    <h2>@Model.Name</h2>
-    <p>@Model.Description</p>
-    <div>
-        <img class="img" src=@Model.Image />
-    </div>
-    <div class="ReviewBox">
-        <h3><u>Reviews</u></h3>
-        @foreach (var review in Model.Reviews)
-        {
-    <h4>@review.Name on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
-            <p>@review.Content</p>
-
-            <a href="/Review/Update/@review.Id/" class="button">Update this review</a>
-            <a href="/Review/Delete/@review.Id/" class="button">Delete this review</a>
-            <hr>
-        }
-
-        <fieldset class="rating">
-            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
-            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
-            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
-            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
-            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
-            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-        </fieldset>
-        <br />
-        <br />
-    </div>
-    <div>
-        <a href="/Review/CreateByProductId/@Model.Id/" class="button">Leave a review!</a>
-    </div>
-    <br />
-    <a href="/Product/Index">Back to all products</a>
+<body class="body">
+<div class="image">
+    <div class="flex-containers">
+        <div class="head">
+            <h1>@Model.Name</h1>
+            <h4>@Model.Description</h4>
+            <img class="img" src=@Model.Image />
+        </div>
+        <div class="flex-containers">
+            <h3><u>Reviews</u></h3>
+            @foreach (var review in Model.Reviews)
+            {
+                <div class="flex-items">
+                    <h4 class="flex-elements">@review.Name on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
+                    <p>@review.Content</p>
+                <div class="flex-links">
+                    <a href="/Review/Update/@review.Id/" class="btn btn-white btn-animated">Update this review</a>
+                    <a href="/Review/Delete/@review.Id/" class="btn btn-white btn-animated">Delete this review</a>
+                </div>
+                    <hr>
+                </div>
+            }
+            <fieldset class="rating">
+                <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
+            <br />
+            <br />
+            <div>
+                <a href="/Review/CreateByProductId/@Model.Id/@Model.Name" class="btn btn-white btn-animated">Leave a review!</a>
+            </div>
+            <br />
+            <a href="/Product/Index" class="btn btn-white btn-animated">Back to all products</a>
+        </div>
+     </div>
+            <div class="footer">Tom Eric Dan Ghassan </div>
+</div>
 </body>
 </html>

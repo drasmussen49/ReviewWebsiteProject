@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewWebsiteProject;
 
 namespace ReviewWebsiteProject.Migrations
 {
     [DbContext(typeof(ArcadeContext))]
-    partial class ArcadeContextModelSnapshot : ModelSnapshot
+    [Migration("20200226171439_ChangedDigDugToPNG")]
+    partial class ChangedDigDugToPNG
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,65 +44,23 @@ namespace ReviewWebsiteProject.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Yellow fruit-eating monster enjoys cherries but not ghosts",
+                            Description = "Yellow fruit-eating monster",
                             Image = "/img/pacman.jpg",
                             Name = "Pac-Man"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Save the realms from certain doom",
-                            Image = "/img/GauntletLegends.jpg",
+                            Description = "Save the Realms from certain doom",
+                            Image = "/img/GauntletLegends.png",
                             Name = "Gauntlet Legends"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "Dig underground and defeat enemies in a maze",
-                            Image = "/img/digdug.jpg",
+                            Description = "Dig and dug",
+                            Image = "/img/digdug.png",
                             Name = "DigDug"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Italian plumber battles evil turtles to save the princess",
-                            Image = "/img/supermariobros.jpg",
-                            Name = "Super Mario"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Battle to the death in this blood fighting game",
-                            Image = "/img/mortalkombat.jpg",
-                            Name = "Mortal Kombat"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Description = "Insane frog attempts to cross new york style traffic",
-                            Image = "/img/frogger.jpg",
-                            Name = "Frogger"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Description = "Attractive hero saves the world from evil dictator",
-                            Image = "/img/timecrisis.jpg",
-                            Name = "Time Crisis"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Description = "Defeat Aliens that have escaped from Area 51",
-                            Image = "/img/area51.jpg",
-                            Name = "Area 51"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Description = "Racing game with awesome stunt tracks",
-                            Image = "/img/sanfranciscorush.jpg",
-                            Name = "San Francisco Rush"
                         });
                 });
 
