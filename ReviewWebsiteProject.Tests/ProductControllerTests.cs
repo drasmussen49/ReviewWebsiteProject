@@ -39,7 +39,7 @@ namespace ReviewWebsiteProject.Tests
 
         //    Assert.IsType<ViewResult>(result);
         //}
-        
+
         //[Fact]
         //public void Passes_One_Product_To_View()
         //{
@@ -47,6 +47,6 @@ namespace ReviewWebsiteProject.Tests
 
         //    Assert.IsType<Product>(result.Model);
         //}
-            
+
     }
 }
