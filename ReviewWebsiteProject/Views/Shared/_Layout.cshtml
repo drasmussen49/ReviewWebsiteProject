@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <header class="header">
+        <section class="header2">
+            <div class="text-box">
+                <h1 class="heading-primary">
+                    <BR>
+                    <span class="header-primary-main2">ARCADE</span>
+                </h1>
+
+                <a href="/Home/Index" class="btn btn-white btn-animated">H o m e</a>
+                <a href="/Product/Index" class="btn btn-white btn-animated">A R C A D E  G A M E S</a>
+                <a href="AboutUs" class="btn btn-white btn-animated">A b o u t   u s</a><BR>
+            </div>
+        </section>
+    </header>
+
+    <div class="main">
+        @RenderBody()
+    </div>
+
+    <div id="footer">Tom Ghassan Eric Dan </div>
+</body>
+</html>
+
+
