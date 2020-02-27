@@ -52,42 +52,42 @@ namespace ReviewWebsiteProject
                     Id = 4,
                     Name = "Super Mario",
                     Description = "Italian plumber battles evil turtles to save the princess",
-                    Image = "/img/supermariobros.jpg"
+                    Image = "/img/supermariobros.png"
                 },
                 new Product
                 {
                     Id = 5,
                     Name = "Mortal Kombat",
                     Description = "Battle to the death in this blood fighting game",
-                    Image = "/img/mortalkombat.jpg"
+                    Image = "/img/mortalkombat.png"
                 },
                 new Product
                 {
                     Id = 6,
                     Name = "Frogger",
                     Description = "Insane frog attempts to cross new york style traffic",
-                    Image = "/img/frogger.jpg"
+                    Image = "/img/frogger.png"
                 },
                 new Product
                 {
                     Id = 7,
                     Name = "Time Crisis",
                     Description = "Attractive hero saves the world from evil dictator",
-                    Image = "/img/timecrisis.jpg"
+                    Image = "/img/timecrisis.png"
                 },
                 new Product
                 {
                     Id = 8,
                     Name = "Area 51",
                     Description = "Defeat Aliens that have escaped from Area 51",
-                    Image = "/img/area51.jpg"
+                    Image = "/img/area51.png"
                 },
                 new Product
                 {
                     Id = 9,
                     Name = "San Francisco Rush",
                     Description = "Racing game with awesome stunt tracks",
-                    Image = "/img/sanfranciscorush.jpg"
+                    Image = "/img/sanfranciscorush.png"
                 }
                 );
             modelBuilder.Entity<Review>().HasData(
