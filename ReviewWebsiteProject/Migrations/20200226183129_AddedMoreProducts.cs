@@ -6,8 +6,6 @@ namespace ReviewWebsiteProject.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-          
-
             migrationBuilder.UpdateData(
                 table: "Products",
                 keyColumn: "Id",
