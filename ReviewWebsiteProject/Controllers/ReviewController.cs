@@ -36,10 +36,11 @@ namespace ReviewWebsiteProject.Controllers
             return View();
         }
         [HttpGet]
-        public ViewResult CreateByProductId(int id)
+        public ViewResult CreateByProductId(int id, Review review)
         {
             ViewBag.ProductId = id;
-            return View();
+            Review model = reviewRepo.GetById(id);
+            return View(model);
         }
         [HttpPost]
         public ActionResult Create(Review review)
