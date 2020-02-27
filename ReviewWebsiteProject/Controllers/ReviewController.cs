@@ -36,9 +36,11 @@ namespace ReviewWebsiteProject.Controllers
             return View();
         }
         [HttpGet]
-        public ViewResult CreateByProductId(int id)
+        public ViewResult CreateByProductId(int id, string pname)
         {
             ViewBag.ProductId = id;
+            ViewBag.ProductName = pname;
+
             return View();
         }
         [HttpPost]

@@ -6,7 +6,6 @@ namespace ReviewWebsiteProject.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-          
             migrationBuilder.UpdateData(
                 table: "Products",
                 keyColumn: "Id",
@@ -74,11 +73,11 @@ namespace ReviewWebsiteProject.Migrations
                 keyColumn: "Id",
                 keyValue: 9);
 
-            migrationBuilder.AddColumn<string>(
-                name: "Date",
-                table: "Reviews",
-                type: "nvarchar(max)",
-                nullable: true);
+            //migrationBuilder.AddColumn<string>(
+            //    name: "Date",
+            //    table: "Reviews",
+            //    type: "nvarchar(max)",
+            //    nullable: true);
 
             migrationBuilder.UpdateData(
                 table: "Products",
