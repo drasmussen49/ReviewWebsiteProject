@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>Delete</title>
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="stylesheet" href="~/css/crudsheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="crudflexbox">
 
     <h3>Are you sure you want to delete this?</h3>
     <div>
@@ -29,13 +31,14 @@
             </dd>
         </dl>
 
-        <form asp-action="Delete" method="post">
-            <input type="submit" value="Delete" class="btn btn-white btn-animated" />
-            <input type="hidden" value="@Model.ProductId" asp-for="ProductId">
-            <a asp-action="Index"></a>
-        </form>
-        <br />
-        <a href="/Product/Details/@Model.ProductId" class="btn btn-white btn-animated">Go Back</a>
+            <form asp-action="Delete" method="post">
+                <input type="submit" value="Delete" class="btn btn-white btn-animated" />
+                <input type="hidden" value="@Model.ProductId" asp-for="ProductId">
+                <a asp-action="Index"></a>
+            </form>
+            <br />
+            <a href="/Product/Details/@Model.ProductId" class="btn btn-white btn-animated">Go Back</a>
+        </div>
     </div>
 </body>
 </html>

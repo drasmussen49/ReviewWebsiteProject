@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>Update</title>
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="stylesheet" href="~/css/crudsheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="crudflexbox">
 
     <h4>@Model.Product.Name Review</h4>
     <div class="row">
@@ -47,13 +49,13 @@
                 </div>
             </form>
         </div>
-    </div>
 
-    <div>
-        <br>
-        <a href="/Product/Details/@Model.ProductId" class="btn btn-white btn-animated">Back to Details</a>
-        <a asp-action="Index"></a>
-    </div>
+        <div>
+            <br>
+            <a href="/Product/Details/@Model.ProductId" class="btn btn-white btn-animated">Back to Details</a>
+            <a asp-action="Index"></a>
+        </div>
 
+    </div>
 </body>
 </html>
