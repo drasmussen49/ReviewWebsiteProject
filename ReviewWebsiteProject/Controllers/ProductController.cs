@@ -15,11 +15,7 @@ namespace ReviewWebsiteProject.Controllers
         {
             this.productRepo = productRepo;
         }
-        public ProductController()
-        {
-
-        }
-        
+       
         public ViewResult Index()
         {
             var model = productRepo.GetAll();
