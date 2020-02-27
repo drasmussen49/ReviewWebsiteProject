@@ -14,7 +14,7 @@
 
 </head>
 <body class="body">
-    <div class="image">
+<div class="image">
     <div class="flex-containers">
         <div class="head">
             <h1>@Model.Name</h1>
@@ -29,9 +29,10 @@
                 <div class="flex-items">
                     <h4 class="flex-elements">@review.Name on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
                     <p>@review.Content</p>
-
+                <div class="flex-links">
                     <a href="/Review/Update/@review.Id/" class="btn btn-white btn-animated">Update this review</a>
                     <a href="/Review/Delete/@review.Id/" class="btn btn-white btn-animated">Delete this review</a>
+                </div>
                     <hr>
                 </div>
             }
@@ -51,12 +52,13 @@
             <br />
             <br />
             <div>
-                <a href="/Review/CreateByProductId/@Model.Id/" class="button">Leave a review!</a>
+                <a href="/Review/CreateByProductId/@Model.Id/" class="btn btn-white btn-animated">Leave a review!</a>
             </div>
             <br />
-            <a href="/Product/Index">Back to all products</a>
+            <a href="/Product/Index" class="btn btn-white btn-animated">Back to all products</a>
         </div>
-    </div>
-        </div>
+     </div>
+            <div class="footer">Tom Eric Dan Ghassan </div>
+</div>
 </body>
 </html>
