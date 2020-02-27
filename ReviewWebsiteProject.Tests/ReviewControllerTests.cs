@@ -10,15 +10,15 @@ using Xunit;
 
 namespace ReviewWebsiteProject.Tests
 {
-    public class ProductControllerTests
+    public class ReviewControllerTests
     {
-        ProductController underTest;
-        IRepository<Product> productRepo;
+        ReviewController underTest;
+        IRepository<Review> reviewRepo;
 
-        public ProductControllerTests()
+        public ReviewControllerTests()
         {
-            productRepo = Substitute.For<IRepository<Product>>();
-            underTest = new ProductController(productRepo);
+            reviewRepo = Substitute.For<IRepository<Review>>();
+            underTest = new ReviewController(reviewRepo);
         }
 
         [Fact]
@@ -32,12 +32,12 @@ namespace ReviewWebsiteProject.Tests
         [Fact]
         public void Index_Passes_All_Courses_To_View()
         {
-            var expectedProducts = new List<Product>();
-            productRepo.GetAll().Returns(expectedProducts);
+            var expectedReviews = new List<Review>();
+            reviewRepo.GetAll().Returns(expectedReviews);
 
             var result = underTest.Index();
 
-            Assert.Equal(expectedProducts, result.Model);
+            Assert.Equal(expectedReviews, result.Model);
         }
 
         [Fact]
@@ -51,12 +51,12 @@ namespace ReviewWebsiteProject.Tests
         [Fact]
         public void Details_Passes_Course_To_View()
         {
-            var expectedProducts = new Product();
-            productRepo.GetById(1).Returns(expectedProducts);
+            var expectedReview = new Review();
+            reviewRepo.GetById(1).Returns(expectedReview);
 
             var result = underTest.Details(1);
 
-            Assert.Equal(expectedProducts, result.Model);
+            Assert.Equal(expectedReview, result.Model);
         }
     }
 }
