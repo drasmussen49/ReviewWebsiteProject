@@ -12,43 +12,47 @@
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="stylesheet" href="~/css/crudsheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="crudflexbox">
+        <h4>@ViewBag.ProductName</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label class="control-label">Reviewer Name:</label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
 
-    <h4>@ViewBag.ProductName</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create" method="post">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label class="control-label">Reviewer Name:</label>
-                    <input asp-for="Name" class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    @*<label asp-for="Date" type="hidden" class="control-label"></label>*@
-                    <input value="@DateTime.Now.ToString("MM/dd/yyyy")"type="hidden" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <div><label asp-for="Content" class="control-label"></label></div>
-                    <textarea asp-for="Content" class="form-control" cols="30" rows="10"></textarea>
-                    <span asp-validation-for="Content" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input name="ProductId" type="hidden" value=@ViewBag.ProductId class="form-control" />
-                    <span asp-validation-for="ProductId" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-            </form>
+                        <input value="@DateTime.Now.ToString("MM/dd/yyyy")" type="hidden" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <div><label asp-for="Content" class="control-label"></label></div>
+                        <textarea asp-for="Content" class="form-control" cols="30" rows="10"></textarea>
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input name="ProductId" type="hidden" value=@ViewBag.ProductId class="form-control" />
+                        <span asp-validation-for="ProductId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-white btn-animated" />
+                        <br />
+                        <br />
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div>
-        <a href="/Product/Details/@ViewBag.ProductId" class="btn btn-white btn-animated"> Go Back </a>
+        <div>
+            <a href="/Product/Details/@ViewBag.ProductId" class="btn btn-white btn-animated"> Go Back </a>
+        </div>
     </div>
 
 </body>
