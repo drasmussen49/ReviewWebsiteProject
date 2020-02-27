@@ -13,12 +13,12 @@ namespace ReviewWebsiteProject.Tests
     public class ReviewControllerTests
     {
         ReviewController underTest;
-        IRepository<Review> courseRepo;
+        IRepository<Review> reviewRepo;
 
         public ReviewControllerTests()
         {
-            courseRepo = Substitute.For<IRepository<Review>>();
-            underTest = new ReviewController(courseRepo);
+            reviewRepo = Substitute.For<IRepository<Review>>();
+            underTest = new ReviewController(reviewRepo);
         }
 
         [Fact]
@@ -32,12 +32,12 @@ namespace ReviewWebsiteProject.Tests
         [Fact]
         public void Index_Passes_All_Courses_To_View()
         {
-            var expectedCourses = new List<Review>();
-            courseRepo.GetAll().Returns(expectedCourses);
+            var expectedReviews = new List<Review>();
+            reviewRepo.GetAll().Returns(expectedReviews);
 
             var result = underTest.Index();
 
-            Assert.Equal(expectedCourses, result.Model);
+            Assert.Equal(expectedReviews, result.Model);
         }
 
         [Fact]
@@ -51,12 +51,12 @@ namespace ReviewWebsiteProject.Tests
         [Fact]
         public void Details_Passes_Course_To_View()
         {
-            var expectedCourse = new Review();
-            courseRepo.GetById(1).Returns(expectedCourse);
+            var expectedReview = new Review();
+            reviewRepo.GetById(1).Returns(expectedReview);
 
             var result = underTest.Details(1);
 
-            Assert.Equal(expectedCourse, result.Model);
+            Assert.Equal(expectedReview, result.Model);
         }
     }
 }

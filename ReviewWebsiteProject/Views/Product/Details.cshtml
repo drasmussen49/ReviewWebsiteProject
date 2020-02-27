@@ -23,7 +23,7 @@
         <h3><u>Reviews</u></h3>
         @foreach (var review in Model.Reviews)
         {
-    <h4>@review.Name on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
+            <h4>@review.Name on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
             <p>@review.Content</p>
 
             <a href="/Review/Update/@review.Id/" class="btn btn-white btn-animated">Update this review</a>

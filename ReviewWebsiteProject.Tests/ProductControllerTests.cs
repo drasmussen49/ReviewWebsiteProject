@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NSubstitute;
 using ReviewWebsiteProject.Controllers;
 using ReviewWebsiteProject.Models;
+using ReviewWebsiteProject.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,43 +12,51 @@ namespace ReviewWebsiteProject.Tests
 {
     public class ProductControllerTests
     {
-        //ProductController controller;
-        //public ProductControllerTests()
-        //{
-        //    controller = new ProductController();
-        //}
+        ProductController underTest;
+        IRepository<Product> productRepo;
 
-        //[Fact]
-        //public void ProductIndex_Return_View()
-        //{
-        //    var result = controller.Index();
+        public ProductControllerTests()
+        {
+            productRepo = Substitute.For<IRepository<Product>>();
+            underTest = new ProductController(productRepo);
+        }
 
-        //    Assert.IsType<ViewResult>(result);
-        //}
+        [Fact]
+        public void Index_Returns_A_View()
+        {
+            var result = underTest.Index();
 
-        //[Fact]
-        //public void ProductIndex_Passes_All_Product_Models_To_View()
-        //{
-        //    var result = controller.Index();
+            Assert.IsType<ViewResult>(result);
+        }
 
-        //    Assert.IsAssignableFrom<IEnumerable<Product>>(result.Model);
-        //}
+        [Fact]
+        public void Index_Passes_All_Courses_To_View()
+        {
+            var expectedProducts = new List<Product>();
+            productRepo.GetAll().Returns(expectedProducts);
 
-        //[Fact]
-        //public void Details_Returns_View()
-        //{
-        //    var result = controller.Details(1);
+            var result = underTest.Index();
 
-        //    Assert.IsType<ViewResult>(result);
-        //}
+            Assert.Equal(expectedProducts, result.Model);
+        }
 
-        //[Fact]
-        //public void Passes_One_Product_To_View()
-        //{
-        //    var result = controller.Details(1);
+        [Fact]
+        public void Details_Returns_A_View()
+        {
+            var result = underTest.Details(1);
 
-        //    Assert.IsType<Product>(result.Model);
-        //}
+            Assert.IsType<ViewResult>(result);
+        }
 
+        [Fact]
+        public void Details_Passes_Course_To_View()
+        {
+            var expectedProducts = new Product();
+            productRepo.GetById(1).Returns(expectedProducts);
+
+            var result = underTest.Details(1);
+
+            Assert.Equal(expectedProducts, result.Model);
+        }
     }
 }
